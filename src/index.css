@@ -7,6 +7,7 @@
 body {
   font-family: "Roboto", sans-serif;
   font-size: 20px;
+  background-color: #fefae0;
 }
 
 .container {
@@ -19,16 +20,21 @@ body {
 
 .size--container {
   margin-top: 30px;
+  display: flex;
+  gap: 20px;
 }
 
 .size--container input {
-  font-size: 18px;
   width: 50px;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
   text-align: center;
-  margin: 0px 20px;
+  background-color: transparent;
   outline: none;
   border: none;
   border-bottom: 2px solid;
+  border-radius: 0;
+  -webkit-border-radius: 0;
 }
 
 .shape--container {
@@ -42,10 +48,57 @@ body {
   transition: border-radius 0.5s ease, width 0.5s ease, height 0.5s ease;
 }
 
-input {
-  margin: 5px;
+.range--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
 .output {
-  margin-bottom: 50px;
+  margin: 30px;
+}
+
+@media (max-width: 375px) {
+  body {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .range--container {
+    gap: 50px;
+  }
+
+  input[type="range"] {
+    scale: 1.2;
+  }
+
+  .output {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 2560px) {
+  body {
+    font-size: 42px;
+  }
+
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .size--container input {
+    background-color: transparent;
+    font-size: 36px;
+    width: 100px;
+  }
+
+  .range--container {
+    gap: 200px;
+  }
+
+  input[type="range"] {
+    scale: 2;
+  }
 }

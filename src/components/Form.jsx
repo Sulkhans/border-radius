@@ -33,7 +33,7 @@ const Form = () => {
     <div className="container">
       <Size size={size} setSize={setSize} />
       <Shape borders={borders} size={size} />
-      <form>
+      <form className="range--container">
         <input
           type="range"
           max={Range()}
